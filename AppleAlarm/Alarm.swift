@@ -14,4 +14,8 @@ class Alarm : NSObject {
     override init() {
         self.time = NSDate()
     }
+    
+    init(time: NSDate) {
+        self.time = time
+    }
 }
