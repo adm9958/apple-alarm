@@ -11,19 +11,15 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="AppleAlarmWatch" customModuleProvider="target">
                     <items>
                         <label width="136" height="28.5" alignment="left" text="10:00 AM" textAlignment="center" id="0rg-Am-eCb">
-                            <fontDescription key="font" type="system" pointSize="32"/>
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="29"/>
                         </label>
-                        <label width="136" height="15.5" alignment="left" text="Label" textAlignment="center" id="aYp-Xx-h4m"/>
-                        <group width="136" height="100" alignment="left" id="5wc-0D-HvA">
+                        <label width="136" height="15.5" alignment="left" text="Alarm" textAlignment="center" id="aYp-Xx-h4m"/>
+                        <group width="136" height="88" alignment="right" id="5wc-0D-HvA">
                             <items>
-                                <button height="1" alignment="left" verticalAlignment="center" title="Dismiss" id="DKI-zZ-Q0K">
+                                <button width="58" height="58" alignment="left" verticalAlignment="center" backgroundImage="snoozebutton" id="mh2-gQ-QI2"/>
+                                <button width="58" height="58" alignment="right" verticalAlignment="center" backgroundImage="dismissbutton" id="DKI-zZ-Q0K">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="backgroundColor" red="0.12549019610000001" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" type="boldSystem" pointSize="15"/>
-                                </button>
-                                <button height="1" alignment="right" verticalAlignment="center" title="Snooze" id="wlx-VM-Qqs">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    <color key="backgroundColor" red="0.12549019607843137" green="0.58823529411764708" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="boldSystem" pointSize="15"/>
                                 </button>
                             </items>
@@ -31,7 +27,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="349.5"/>
+            <point key="canvasLocation" x="220" y="349"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
