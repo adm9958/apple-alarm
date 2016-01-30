@@ -9,13 +9,16 @@
 import Foundation
 
 class Alarm : NSObject {
+    var name: String
     var time: NSDate
     
     override init() {
+        self.name = "New Alarm"
         self.time = NSDate()
     }
     
-    init(time: NSDate) {
-        self.time = time
+    init(name: String, time newTime: NSDate) {
+        self.name = name
+        self.time = newTime
     }
 }
