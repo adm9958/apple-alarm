@@ -9,10 +9,25 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>AppleAlarmWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Notification - AppleAlarmWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>4E0DD9FD1C5D16C4000E18F9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4E0DDA141C5D2407000E18F9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
