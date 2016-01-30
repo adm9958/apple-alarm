@@ -1,0 +1,777 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D1B026AF1C5D6A200099520F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B026AE1C5D6A200099520F /* AppDelegate.swift */; };
+		D1B026B11C5D6A200099520F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B026B01C5D6A200099520F /* ViewController.swift */; };
+		D1B026B41C5D6A200099520F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B026B21C5D6A200099520F /* Main.storyboard */; };
+		D1B026B61C5D6A200099520F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1B026B51C5D6A200099520F /* Assets.xcassets */; };
+		D1B026B91C5D6A200099520F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B026B71C5D6A200099520F /* LaunchScreen.storyboard */; };
+		D1B026C41C5D6A200099520F /* AppleAlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B026C31C5D6A200099520F /* AppleAlarmTests.swift */; };
+		D1B026CF1C5D6A200099520F /* AppleAlarmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B026CE1C5D6A200099520F /* AppleAlarmUITests.swift */; };
+		D1B026E21C5D6A870099520F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B026E01C5D6A870099520F /* Interface.storyboard */; };
+		D1B026E41C5D6A870099520F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1B026E31C5D6A870099520F /* Assets.xcassets */; };
+		D1B026EB1C5D6A870099520F /* AppleAlarmWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D1B026EA1C5D6A870099520F /* AppleAlarmWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D1B026F21C5D6A870099520F /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B026F11C5D6A870099520F /* InterfaceController.swift */; };
+		D1B026F41C5D6A870099520F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B026F31C5D6A870099520F /* ExtensionDelegate.swift */; };
+		D1B026F61C5D6A870099520F /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B026F51C5D6A870099520F /* NotificationController.swift */; };
+		D1B026F81C5D6A870099520F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1B026F71C5D6A870099520F /* Assets.xcassets */; };
+		D1B026FC1C5D6A870099520F /* AppleAlarmWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D1B026DE1C5D6A870099520F /* AppleAlarmWatch.app */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D1B026C01C5D6A200099520F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1B026A31C5D6A200099520F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1B026AA1C5D6A200099520F;
+			remoteInfo = AppleAlarm;
+		};
+		D1B026CB1C5D6A200099520F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1B026A31C5D6A200099520F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1B026AA1C5D6A200099520F;
+			remoteInfo = AppleAlarm;
+		};
+		D1B026EC1C5D6A870099520F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1B026A31C5D6A200099520F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1B026E91C5D6A870099520F;
+			remoteInfo = "AppleAlarmWatch Extension";
+		};
+		D1B026FA1C5D6A870099520F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1B026A31C5D6A200099520F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1B026DD1C5D6A870099520F;
+			remoteInfo = AppleAlarmWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D1B027001C5D6A870099520F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D1B026EB1C5D6A870099520F /* AppleAlarmWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B027041C5D6A870099520F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D1B026FC1C5D6A870099520F /* AppleAlarmWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D1B026AB1C5D6A200099520F /* AppleAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B026AE1C5D6A200099520F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D1B026B01C5D6A200099520F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D1B026B31C5D6A200099520F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D1B026B51C5D6A200099520F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1B026B81C5D6A200099520F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D1B026BA1C5D6A200099520F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1B026BF1C5D6A200099520F /* AppleAlarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleAlarmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B026C31C5D6A200099520F /* AppleAlarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAlarmTests.swift; sourceTree = "<group>"; };
+		D1B026C51C5D6A200099520F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1B026CA1C5D6A200099520F /* AppleAlarmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleAlarmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B026CE1C5D6A200099520F /* AppleAlarmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAlarmUITests.swift; sourceTree = "<group>"; };
+		D1B026D01C5D6A200099520F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1B026DE1C5D6A870099520F /* AppleAlarmWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleAlarmWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B026E11C5D6A870099520F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		D1B026E31C5D6A870099520F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1B026E51C5D6A870099520F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1B026EA1C5D6A870099520F /* AppleAlarmWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AppleAlarmWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B026F01C5D6A870099520F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		D1B026F11C5D6A870099520F /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		D1B026F31C5D6A870099520F /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		D1B026F51C5D6A870099520F /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		D1B026F71C5D6A870099520F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1B026F91C5D6A870099520F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1B026A81C5D6A200099520F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B026BC1C5D6A200099520F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B026C71C5D6A200099520F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B026E71C5D6A870099520F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D1B026A21C5D6A200099520F = {
+			isa = PBXGroup;
+			children = (
+				D1B026AD1C5D6A200099520F /* AppleAlarm */,
+				D1B026C21C5D6A200099520F /* AppleAlarmTests */,
+				D1B026CD1C5D6A200099520F /* AppleAlarmUITests */,
+				D1B026DF1C5D6A870099520F /* AppleAlarmWatch */,
+				D1B026EE1C5D6A870099520F /* AppleAlarmWatch Extension */,
+				D1B026AC1C5D6A200099520F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D1B026AC1C5D6A200099520F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1B026AB1C5D6A200099520F /* AppleAlarm.app */,
+				D1B026BF1C5D6A200099520F /* AppleAlarmTests.xctest */,
+				D1B026CA1C5D6A200099520F /* AppleAlarmUITests.xctest */,
+				D1B026DE1C5D6A870099520F /* AppleAlarmWatch.app */,
+				D1B026EA1C5D6A870099520F /* AppleAlarmWatch Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1B026AD1C5D6A200099520F /* AppleAlarm */ = {
+			isa = PBXGroup;
+			children = (
+				D1B026AE1C5D6A200099520F /* AppDelegate.swift */,
+				D1B026B01C5D6A200099520F /* ViewController.swift */,
+				D1B026B21C5D6A200099520F /* Main.storyboard */,
+				D1B026B51C5D6A200099520F /* Assets.xcassets */,
+				D1B026B71C5D6A200099520F /* LaunchScreen.storyboard */,
+				D1B026BA1C5D6A200099520F /* Info.plist */,
+			);
+			path = AppleAlarm;
+			sourceTree = "<group>";
+		};
+		D1B026C21C5D6A200099520F /* AppleAlarmTests */ = {
+			isa = PBXGroup;
+			children = (
+				D1B026C31C5D6A200099520F /* AppleAlarmTests.swift */,
+				D1B026C51C5D6A200099520F /* Info.plist */,
+			);
+			path = AppleAlarmTests;
+			sourceTree = "<group>";
+		};
+		D1B026CD1C5D6A200099520F /* AppleAlarmUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D1B026CE1C5D6A200099520F /* AppleAlarmUITests.swift */,
+				D1B026D01C5D6A200099520F /* Info.plist */,
+			);
+			path = AppleAlarmUITests;
+			sourceTree = "<group>";
+		};
+		D1B026DF1C5D6A870099520F /* AppleAlarmWatch */ = {
+			isa = PBXGroup;
+			children = (
+				D1B026E01C5D6A870099520F /* Interface.storyboard */,
+				D1B026E31C5D6A870099520F /* Assets.xcassets */,
+				D1B026E51C5D6A870099520F /* Info.plist */,
+			);
+			path = AppleAlarmWatch;
+			sourceTree = "<group>";
+		};
+		D1B026EE1C5D6A870099520F /* AppleAlarmWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D1B026F11C5D6A870099520F /* InterfaceController.swift */,
+				D1B026F31C5D6A870099520F /* ExtensionDelegate.swift */,
+				D1B026F51C5D6A870099520F /* NotificationController.swift */,
+				D1B026F71C5D6A870099520F /* Assets.xcassets */,
+				D1B026F91C5D6A870099520F /* Info.plist */,
+				D1B026EF1C5D6A870099520F /* Supporting Files */,
+			);
+			path = "AppleAlarmWatch Extension";
+			sourceTree = "<group>";
+		};
+		D1B026EF1C5D6A870099520F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D1B026F01C5D6A870099520F /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1B026AA1C5D6A200099520F /* AppleAlarm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B026D31C5D6A200099520F /* Build configuration list for PBXNativeTarget "AppleAlarm" */;
+			buildPhases = (
+				D1B026A71C5D6A200099520F /* Sources */,
+				D1B026A81C5D6A200099520F /* Frameworks */,
+				D1B026A91C5D6A200099520F /* Resources */,
+				D1B027041C5D6A870099520F /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1B026FB1C5D6A870099520F /* PBXTargetDependency */,
+			);
+			name = AppleAlarm;
+			productName = AppleAlarm;
+			productReference = D1B026AB1C5D6A200099520F /* AppleAlarm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D1B026BE1C5D6A200099520F /* AppleAlarmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B026D61C5D6A200099520F /* Build configuration list for PBXNativeTarget "AppleAlarmTests" */;
+			buildPhases = (
+				D1B026BB1C5D6A200099520F /* Sources */,
+				D1B026BC1C5D6A200099520F /* Frameworks */,
+				D1B026BD1C5D6A200099520F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1B026C11C5D6A200099520F /* PBXTargetDependency */,
+			);
+			name = AppleAlarmTests;
+			productName = AppleAlarmTests;
+			productReference = D1B026BF1C5D6A200099520F /* AppleAlarmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D1B026C91C5D6A200099520F /* AppleAlarmUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B026D91C5D6A200099520F /* Build configuration list for PBXNativeTarget "AppleAlarmUITests" */;
+			buildPhases = (
+				D1B026C61C5D6A200099520F /* Sources */,
+				D1B026C71C5D6A200099520F /* Frameworks */,
+				D1B026C81C5D6A200099520F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1B026CC1C5D6A200099520F /* PBXTargetDependency */,
+			);
+			name = AppleAlarmUITests;
+			productName = AppleAlarmUITests;
+			productReference = D1B026CA1C5D6A200099520F /* AppleAlarmUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		D1B026DD1C5D6A870099520F /* AppleAlarmWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B027011C5D6A870099520F /* Build configuration list for PBXNativeTarget "AppleAlarmWatch" */;
+			buildPhases = (
+				D1B026DC1C5D6A870099520F /* Resources */,
+				D1B027001C5D6A870099520F /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1B026ED1C5D6A870099520F /* PBXTargetDependency */,
+			);
+			name = AppleAlarmWatch;
+			productName = AppleAlarmWatch;
+			productReference = D1B026DE1C5D6A870099520F /* AppleAlarmWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D1B026E91C5D6A870099520F /* AppleAlarmWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B026FD1C5D6A870099520F /* Build configuration list for PBXNativeTarget "AppleAlarmWatch Extension" */;
+			buildPhases = (
+				D1B026E61C5D6A870099520F /* Sources */,
+				D1B026E71C5D6A870099520F /* Frameworks */,
+				D1B026E81C5D6A870099520F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AppleAlarmWatch Extension";
+			productName = "AppleAlarmWatch Extension";
+			productReference = D1B026EA1C5D6A870099520F /* AppleAlarmWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1B026A31C5D6A200099520F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Antar Vasi, Alexander McLean, Gabriel Isserlis";
+				TargetAttributes = {
+					D1B026AA1C5D6A200099520F = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = E7GJ8T95DL;
+					};
+					D1B026BE1C5D6A200099520F = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = E7GJ8T95DL;
+						TestTargetID = D1B026AA1C5D6A200099520F;
+					};
+					D1B026C91C5D6A200099520F = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = E7GJ8T95DL;
+						TestTargetID = D1B026AA1C5D6A200099520F;
+					};
+					D1B026DD1C5D6A870099520F = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = E7GJ8T95DL;
+					};
+					D1B026E91C5D6A870099520F = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = E7GJ8T95DL;
+					};
+				};
+			};
+			buildConfigurationList = D1B026A61C5D6A200099520F /* Build configuration list for PBXProject "AppleAlarm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D1B026A21C5D6A200099520F;
+			productRefGroup = D1B026AC1C5D6A200099520F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1B026AA1C5D6A200099520F /* AppleAlarm */,
+				D1B026BE1C5D6A200099520F /* AppleAlarmTests */,
+				D1B026C91C5D6A200099520F /* AppleAlarmUITests */,
+				D1B026DD1C5D6A870099520F /* AppleAlarmWatch */,
+				D1B026E91C5D6A870099520F /* AppleAlarmWatch Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1B026A91C5D6A200099520F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1B026B91C5D6A200099520F /* LaunchScreen.storyboard in Resources */,
+				D1B026B61C5D6A200099520F /* Assets.xcassets in Resources */,
+				D1B026B41C5D6A200099520F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B026BD1C5D6A200099520F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B026C81C5D6A200099520F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B026DC1C5D6A870099520F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1B026E41C5D6A870099520F /* Assets.xcassets in Resources */,
+				D1B026E21C5D6A870099520F /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B026E81C5D6A870099520F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1B026F81C5D6A870099520F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1B026A71C5D6A200099520F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1B026B11C5D6A200099520F /* ViewController.swift in Sources */,
+				D1B026AF1C5D6A200099520F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B026BB1C5D6A200099520F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1B026C41C5D6A200099520F /* AppleAlarmTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B026C61C5D6A200099520F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1B026CF1C5D6A200099520F /* AppleAlarmUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B026E61C5D6A870099520F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1B026F61C5D6A870099520F /* NotificationController.swift in Sources */,
+				D1B026F41C5D6A870099520F /* ExtensionDelegate.swift in Sources */,
+				D1B026F21C5D6A870099520F /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D1B026C11C5D6A200099520F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1B026AA1C5D6A200099520F /* AppleAlarm */;
+			targetProxy = D1B026C01C5D6A200099520F /* PBXContainerItemProxy */;
+		};
+		D1B026CC1C5D6A200099520F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1B026AA1C5D6A200099520F /* AppleAlarm */;
+			targetProxy = D1B026CB1C5D6A200099520F /* PBXContainerItemProxy */;
+		};
+		D1B026ED1C5D6A870099520F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1B026E91C5D6A870099520F /* AppleAlarmWatch Extension */;
+			targetProxy = D1B026EC1C5D6A870099520F /* PBXContainerItemProxy */;
+		};
+		D1B026FB1C5D6A870099520F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1B026DD1C5D6A870099520F /* AppleAlarmWatch */;
+			targetProxy = D1B026FA1C5D6A870099520F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D1B026B21C5D6A200099520F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1B026B31C5D6A200099520F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D1B026B71C5D6A200099520F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1B026B81C5D6A200099520F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D1B026E01C5D6A870099520F /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1B026E11C5D6A870099520F /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D1B026D11C5D6A200099520F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D1B026D21C5D6A200099520F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D1B026D41C5D6A200099520F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AppleAlarm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AppleAlarm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D1B026D51C5D6A200099520F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AppleAlarm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AppleAlarm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D1B026D71C5D6A200099520F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AppleAlarmTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AppleAlarmTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppleAlarm.app/AppleAlarm";
+			};
+			name = Debug;
+		};
+		D1B026D81C5D6A200099520F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AppleAlarmTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AppleAlarmTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppleAlarm.app/AppleAlarm";
+			};
+			name = Release;
+		};
+		D1B026DA1C5D6A200099520F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AppleAlarmUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AppleAlarmUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AppleAlarm;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D1B026DB1C5D6A200099520F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AppleAlarmUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AppleAlarmUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AppleAlarm;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+		D1B026FE1C5D6A870099520F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "AppleAlarmWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AppleAlarm.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		D1B026FF1C5D6A870099520F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "AppleAlarmWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AppleAlarm.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		D1B027021C5D6A870099520F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = AppleAlarmWatch_Extension;
+				INFOPLIST_FILE = AppleAlarmWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AppleAlarm.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		D1B027031C5D6A870099520F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = AppleAlarmWatch_Extension;
+				INFOPLIST_FILE = AppleAlarmWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AppleAlarm.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1B026A61C5D6A200099520F /* Build configuration list for PBXProject "AppleAlarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B026D11C5D6A200099520F /* Debug */,
+				D1B026D21C5D6A200099520F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1B026D31C5D6A200099520F /* Build configuration list for PBXNativeTarget "AppleAlarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B026D41C5D6A200099520F /* Debug */,
+				D1B026D51C5D6A200099520F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D1B026D61C5D6A200099520F /* Build configuration list for PBXNativeTarget "AppleAlarmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B026D71C5D6A200099520F /* Debug */,
+				D1B026D81C5D6A200099520F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D1B026D91C5D6A200099520F /* Build configuration list for PBXNativeTarget "AppleAlarmUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B026DA1C5D6A200099520F /* Debug */,
+				D1B026DB1C5D6A200099520F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D1B026FD1C5D6A870099520F /* Build configuration list for PBXNativeTarget "AppleAlarmWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B026FE1C5D6A870099520F /* Debug */,
+				D1B026FF1C5D6A870099520F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D1B027011C5D6A870099520F /* Build configuration list for PBXNativeTarget "AppleAlarmWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B027021C5D6A870099520F /* Debug */,
+				D1B027031C5D6A870099520F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D1B026A31C5D6A200099520F /* Project object */;
+}
