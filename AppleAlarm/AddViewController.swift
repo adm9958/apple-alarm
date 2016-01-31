@@ -35,7 +35,8 @@ class AddViewController: UIViewController {
         if segue.identifier == "DoneItem" {
             if let name = alarmTitleTF.text {
                 if !name.isEmpty {
-                    newItem = Alarm()
+                    newItem = Alarm(name: name, time: NSDate())
+                    
                 }
             }
         }

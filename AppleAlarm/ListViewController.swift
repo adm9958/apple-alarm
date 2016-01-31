@@ -18,7 +18,7 @@ class ListViewController : UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AlarmItemTableViewCell", forIndexPath: indexPath) as! AlarmItemTableViewCell
-        let item = itemsList[indexPath.row]
+        let item = alarmsManager.alarms[indexPath.row]
         cell.alarmNameLabel?.text = item.name
         cell.alarmDayLabel?.text = item.daysShort
         cell.alarmTimeLabel?.text = item.timeShort
