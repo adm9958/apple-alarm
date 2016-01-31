@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>AppleAlarm.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>AppleAlarmWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Notification - AppleAlarmWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>D1B026AA1C5D6A200099520F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1B026BE1C5D6A200099520F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1B026C91C5D6A200099520F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1B026DD1C5D6A870099520F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
