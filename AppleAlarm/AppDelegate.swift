@@ -36,6 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
             // Do the work
             self.doBackgroundWork()
+            
             application.endBackgroundTask(self.bgTask)
             self.bgTask = UIBackgroundTaskInvalid
         })
@@ -55,6 +56,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func doBackgroundWork() {
         
+    }
+    
+    func scheduleAlarmForDate(date: NSDate) {
+        let app: UIApplication = UIApplication.sharedApplication()
+        let oldNotifications: [UILocalNotification]? = app.scheduledLocalNotifications
+        
+        if oldNotifications?.count > 0 {
+            app.cancelAllLocalNotifications()
+        }
+        
+        let alarm: UILocalNotification = UILocalNotification()
+        alarm.fireDate = date
+        alarm.timeZone = NSTimeZone.defaultTimeZone()
+        alarm.repeatInterval = NSCalendarUnit(rawValue: 0)
+        alarm.alertBody = "Time to wake up!"
+
+        app.scheduleLocalNotification(alarm)
     }
 }
 
