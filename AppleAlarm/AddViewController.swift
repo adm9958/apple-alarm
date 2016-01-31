@@ -138,7 +138,6 @@ class AddViewController: UIViewController {
         }
     }
 
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -167,6 +166,8 @@ class AddViewController: UIViewController {
                 if !alarmName.isEmpty {
                     newItem = Alarm(isActive: true, name: alarmName, time: time, vibrate: true, snooze: 0, media: "default", daysShort: days, timeShort: timeShort)
                 }
+                }
+            }
             print(days)
             
             //get all buttons that are enabled
