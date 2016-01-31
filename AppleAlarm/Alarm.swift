@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Alarm : NSObject {
+class Alarm : NSObject, NSCoding {
     //variables for alarm
     var isActive: Bool
     var name: String
@@ -23,6 +23,18 @@ class Alarm : NSObject {
     //extra variables for display in list
     var daysShort: String //short values of days
     var timeShort: String //display value of time
+    
+    //global constants for keys used to identify data for archiving
+    let IsActiveKey = "isActiveKey"
+    let NameKey = "nameKey"
+    let TimeKey = "timeKey"
+    let AlarmColorKey = "alarmColorKey"
+    let VibrateKey = "vibrateKey"
+    let SnoozeKey = "snoozeKey"
+    let DeviceKey = "deviceKey"
+    let MediaKey = "mediaKey"
+    let DaysShortKey = "daysShortKey"
+    let TimeShortKey = "timeShortKey"
     
     // FIXME: not correctly initializing - written like this to compile
     override init() {
@@ -53,4 +65,27 @@ class Alarm : NSObject {
         self.timeShort = "10:00am"
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        isActive = aDecoder.decodeObjectForKey(IsActiveKey) as! Bool
+        name = aDecoder.decodeObjectForKey(NameKey) as! String
+        time = aDecoder.decodeObjectForKey(TimeKey) as! NSDate
+        vibrate = aDecoder.decodeObjectForKey(VibrateKey) as! Bool
+        snooze = aDecoder.decodeObjectForKey(SnoozeKey) as! Int
+        device = aDecoder.decodeObjectForKey(DeviceKey) as! String
+        media = aDecoder.decodeObjectForKey(MediaKey) as! String
+        daysShort = aDecoder.decodeObjectForKey(DaysShortKey) as! String
+        timeShort = aDecoder.decodeObjectForKey(TimeShortKey) as! String
+    }
+    
+    func encodeWithCoder(coder: NSCoder) {
+        coder.encodeObject(isActive, forKey: IsActiveKey)
+        coder.encodeObject(name, forKey: NameKey)
+        coder.encodeObject(time, forKey: TimeKey)
+        coder.encodeObject(vibrate, forKey: VibrateKey)
+        coder.encodeObject(snooze, forKey: SnoozeKey)
+        coder.encodeObject(device, forKey: DeviceKey)
+        coder.encodeObject(media, forKey: MediaKey)
+        coder.encodeObject(daysShort, forKey: DaysShortKey)
+        coder.encodeObject(timeShort, forKey: TimeShortKey)
+    }
 }
