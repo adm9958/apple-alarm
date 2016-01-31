@@ -156,6 +156,7 @@ class AddViewController: UIViewController {
         //dateFormatter.dateFormat = "hh:mm"
         //let date = dateFormatter.dateFromString(
         if segue.identifier == "DoneItem" {
+
             timeShort = hourTF.text! + ":" + minuteTF.text! + timeOfDay
             if let alarmName: String = alarmTitleTF.text {
                 for i in dayBtns {
@@ -166,12 +167,12 @@ class AddViewController: UIViewController {
                 if !alarmName.isEmpty {
                     newItem = Alarm(isActive: true, name: alarmName, time: time, vibrate: true, snooze: 0, media: "default", daysShort: days, timeShort: timeShort)
                 }
-            }
             print(days)
             
             //get all buttons that are enabled
             //create a new alarm item using all attributes
         }
+    }
     }
 
 }

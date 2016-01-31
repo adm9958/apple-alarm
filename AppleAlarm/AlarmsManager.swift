@@ -23,6 +23,11 @@ class AlarmsManager {
         unarchiveSavedAlarms()
     }
     
+    func addAlarm(alarm: Alarm) {
+        alarms.append(alarm)
+        save()
+    }
+    
     func save() {
         NSKeyedArchiver.archiveRootObject(alarms, toFile: archivePath)
     }
