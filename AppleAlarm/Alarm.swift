@@ -34,8 +34,8 @@ class Alarm : NSObject {
         self.device = "Default"
         self.media = "Default"
         
-        self.daysShort = ""
-        self.timeShort = ""
+        self.daysShort = "day"
+        self.timeShort = "11:65jm"
     }
     
     // FIXME: not correctly initializing
@@ -49,8 +49,8 @@ class Alarm : NSObject {
         self.device = "Default"
         self.media = "Default"
         
-        self.daysShort = ""
-        self.timeShort = ""
+        self.daysShort = "Wed"
+        self.timeShort = "10:00am"
     }
     
 }

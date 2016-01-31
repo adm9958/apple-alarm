@@ -21,9 +21,12 @@ class ListViewController : UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ListViewCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("AlarmItemTableViewCell", forIndexPath: indexPath) as! AlarmItemTableViewCell
         let item = itemsList[indexPath.row]
-        cell.textLabel?.text = item.name
+        cell.alarmNameLabel?.text = item.name
+        cell.alarmDayLabel?.text = item.daysShort
+        cell.alarmTimeLabel?.text = item.timeShort
+        cell.alarmSoundLabel?.text = item.media
         
         return cell
     }
