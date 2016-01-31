@@ -57,8 +57,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func doBackgroundWork() {
         // TODO: Replace this block of test code with the actual algorithm
-        let date: NSDate = NSDate()
-        scheduleAlarmForDate(date)
+        let currentDate: NSDate = NSDate()
+        let alarmsManager: AlarmsManager = AlarmsManager()
+        if let alarms: [Alarm]? = alarmsManager.alarms {
+            for a in alarms! {
+                let date: NSDate = a.time
+                if date.isEqualToDate(currentDate) {
+                    scheduleAlarmForDate(date)
+                }
+            }
+        }
     }
     
     func scheduleAlarmForDate(date: NSDate) {
