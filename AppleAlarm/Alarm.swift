@@ -52,8 +52,8 @@ class Alarm : NSObject, NSCoding {
     
     // FIXME: not correctly initializing
     //init for creating alarm item
-    init(name: String, time newTime: NSDate) {
-        self.isActive = true
+    init(name: String, time newTime: NSDate, active isActive: Bool) {
+        self.isActive = isActive
         self.name = name
         self.time = newTime
         self.vibrate = true
