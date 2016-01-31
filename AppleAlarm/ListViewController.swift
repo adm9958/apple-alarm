@@ -10,19 +10,15 @@ import Foundation
 import UIKit
 
 class ListViewController : UITableViewController {
-    var itemsList = [
-        Alarm(),
-        Alarm(),
-        Alarm()]
+    let alarmsManager = AlarmsManager()
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return itemsList.count
+        return alarmsManager.alarms.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ListViewCell", forIndexPath: indexPath)
-        let item = itemsList[indexPath.row]
+        let item = alarmsManager.alarms[indexPath.row]
         cell.textLabel?.text = item.name
         
         return cell
@@ -32,9 +28,10 @@ class ListViewController : UITableViewController {
         if segue.identifier == "DoneItem" {
             let addVC = segue.sourceViewController as! AddViewController
             if let newItem = addVC.newItem {
-                itemsList += [newItem]
+                alarmsManager.alarms += [newItem]
+                alarmsManager.save()
                 
-                let indexPath = NSIndexPath(forRow: itemsList.count - 1, inSection: 0)
+                let indexPath = NSIndexPath(forRow: alarmsManager.alarms.count - 1, inSection: 0)
                 tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
             }
         }
