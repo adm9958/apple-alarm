@@ -74,7 +74,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         alarm.timeZone = NSTimeZone.defaultTimeZone()
         alarm.repeatInterval = NSCalendarUnit(rawValue: 0)
         alarm.soundName = UILocalNotificationDefaultSoundName
-        alarm.alertBody = "Time to wake up!"
+        alarm.alertBody = "Your alarm went off on " + date.toShortTimeString()
 
         app.scheduleLocalNotification(alarm)
     }
