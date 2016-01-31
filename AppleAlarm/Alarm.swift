@@ -88,4 +88,8 @@ class Alarm : NSObject, NSCoding {
         coder.encodeObject(daysShort, forKey: DaysShortKey)
         coder.encodeObject(timeShort, forKey: TimeShortKey)
     }
+    
+    func convertToNSDate(timeValue: String){
+        
+    }
 }
