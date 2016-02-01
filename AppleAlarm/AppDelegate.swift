@@ -94,5 +94,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         app.scheduleLocalNotification(alarm)
     }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        self.window?.rootViewController = AlarmNotificationViewController()
+    }
 }
 
