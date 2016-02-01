@@ -56,14 +56,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func doBackgroundWork() {
-        // TODO: Replace this block of test code with the actual algorithm
-        let currentDate: NSDate = NSDate()
-        let alarmsManager: AlarmsManager = AlarmsManager()
-        if let alarms: [Alarm]? = alarmsManager.alarms {
-            for a in alarms! {
-                let date: NSDate = a.time
-                if date.isEqualToDate(currentDate) {
-                    scheduleAlarmForDate(date)
+        var flag: Bool = false
+        // Continuously ping the system for the current date and time
+        while !flag {
+            let currentDate: NSDate = NSDate()
+            let alarmsManager: AlarmsManager = AlarmsManager()
+            let curHour: Int = currentDate.hour()
+            let curMin: Int = currentDate.minute()
+            if let alarms: [Alarm]? = alarmsManager.alarms {
+                for a in alarms! {
+                    let date: NSDate = a.time
+                    let hour: Int = date.hour()
+                    let min: Int = date.minute()
+                    if date.hour() == currentDate.hour() && date.minute() == currentDate.minute() {
+                        flag = true
+                        scheduleAlarmForDate(date)
+                    }
                 }
             }
         }
