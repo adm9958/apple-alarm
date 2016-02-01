@@ -17,7 +17,7 @@ class Alarm : NSObject, NSCoding {
     let alarmColor = UIColor.blueColor()
     var vibrate: Bool
     var snooze: Int
-    var device: String
+    //var device: String
     var media: String
     
     //extra variables for display in list
@@ -31,7 +31,7 @@ class Alarm : NSObject, NSCoding {
     let AlarmColorKey = "alarmColorKey"
     let VibrateKey = "vibrateKey"
     let SnoozeKey = "snoozeKey"
-    let DeviceKey = "deviceKey"
+    //let DeviceKey = "deviceKey"
     let MediaKey = "mediaKey"
     let DaysShortKey = "daysShortKey"
     let TimeShortKey = "timeShortKey"
@@ -43,7 +43,7 @@ class Alarm : NSObject, NSCoding {
         self.time = NSDate()
         self.vibrate = true
         self.snooze = 0
-        self.device = "Default"
+        //self.device = "Default"
         self.media = "Default"
         
         self.daysShort = "day"
@@ -52,17 +52,17 @@ class Alarm : NSObject, NSCoding {
     
     // FIXME: not correctly initializing
     //init for creating alarm item
-    init(name: String, time newTime: NSDate, active isActive: Bool) {
+    init(isActive: Bool, name: String, time newTime: NSDate, vibrate: Bool, snooze: Int, media: String, daysShort: String, timeShort: String) {
         self.isActive = isActive
         self.name = name
         self.time = newTime
-        self.vibrate = true
-        self.snooze = 0
-        self.device = "Default"
-        self.media = "Default"
+        self.vibrate = vibrate
+        self.snooze = snooze
+        //self.device = "Default"
+        self.media = media
         
-        self.daysShort = "Wed"
-        self.timeShort = "10:00am"
+        self.daysShort = daysShort
+        self.timeShort = timeShort
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -71,7 +71,7 @@ class Alarm : NSObject, NSCoding {
         time = aDecoder.decodeObjectForKey(TimeKey) as! NSDate
         vibrate = aDecoder.decodeObjectForKey(VibrateKey) as! Bool
         snooze = aDecoder.decodeObjectForKey(SnoozeKey) as! Int
-        device = aDecoder.decodeObjectForKey(DeviceKey) as! String
+        //device = aDecoder.decodeObjectForKey(DeviceKey) as! String
         media = aDecoder.decodeObjectForKey(MediaKey) as! String
         daysShort = aDecoder.decodeObjectForKey(DaysShortKey) as! String
         timeShort = aDecoder.decodeObjectForKey(TimeShortKey) as! String
@@ -83,7 +83,7 @@ class Alarm : NSObject, NSCoding {
         coder.encodeObject(time, forKey: TimeKey)
         coder.encodeObject(vibrate, forKey: VibrateKey)
         coder.encodeObject(snooze, forKey: SnoozeKey)
-        coder.encodeObject(device, forKey: DeviceKey)
+        //coder.encodeObject(device, forKey: DeviceKey)
         coder.encodeObject(media, forKey: MediaKey)
         coder.encodeObject(daysShort, forKey: DaysShortKey)
         coder.encodeObject(timeShort, forKey: TimeShortKey)
