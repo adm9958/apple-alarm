@@ -166,6 +166,10 @@ class AddViewController: UIViewController {
                 if !alarmName.isEmpty {
                     newItem = Alarm(isActive: true, name: alarmName, time: time, vibrate: true, snooze: 0, media: "default", daysShort: days, timeShort: timeShort)
                 }
+            if let name = alarmTitleTF.text {
+                if !name.isEmpty {
+                    newItem = Alarm(name: name, time: NSDate(), active: true)
+                    
                 }
             }
             print(days)
