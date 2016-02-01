@@ -11,6 +11,7 @@
 		0F1D06FF1C5EA4A500351784 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1D06FE1C5EA4A500351784 /* extensions.swift */; };
 		4E26CC521C5D7B8500007EB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B026AE1C5D6A200099520F /* AppDelegate.swift */; };
 		4E26CC531C5D7FBF00007EB6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B026F31C5D6A870099520F /* ExtensionDelegate.swift */; };
+		D103DA211C5E96F30062BD90 /* DayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103DA201C5E96F30062BD90 /* DayButton.swift */; };
 		D106A1001C5D8CEF0042C38C /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = D106A0FF1C5D8CEF0042C38C /* Alarm.swift */; };
 		D106A1021C5D90E70042C38C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D106A1011C5D90E70042C38C /* ListViewController.swift */; };
 		D1AE55701C5D9FFF009FB954 /* AlarmItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AE556F1C5D9FFF009FB954 /* AlarmItemTableViewCell.swift */; };
@@ -87,6 +88,7 @@
 
 /* Begin PBXFileReference section */
 		0F1D06FC1C5DA0D900351784 /* AlarmsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmsManager.swift; sourceTree = "<group>"; };
+		D103DA201C5E96F30062BD90 /* DayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayButton.swift; sourceTree = "<group>"; };
 		0F1D06FE1C5EA4A500351784 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		D106A0FF1C5D8CEF0042C38C /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		D106A1011C5D90E70042C38C /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				D1B026B01C5D6A200099520F /* AddViewController.swift */,
 				D106A1011C5D90E70042C38C /* ListViewController.swift */,
 				D1B026B21C5D6A200099520F /* Main.storyboard */,
+				D103DA201C5E96F30062BD90 /* DayButton.swift */,
 				D1AE556F1C5D9FFF009FB954 /* AlarmItemTableViewCell.swift */,
 				D1B026B51C5D6A200099520F /* Assets.xcassets */,
 				D1B026B71C5D6A200099520F /* LaunchScreen.storyboard */,
@@ -444,6 +447,7 @@
 				D106A1021C5D90E70042C38C /* ListViewController.swift in Sources */,
 				D106A1001C5D8CEF0042C38C /* Alarm.swift in Sources */,
 				0F1D06FD1C5DA0D900351784 /* AlarmsManager.swift in Sources */,
+				D103DA211C5E96F30062BD90 /* DayButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
