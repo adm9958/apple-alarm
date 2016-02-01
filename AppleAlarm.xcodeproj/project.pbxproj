@@ -14,6 +14,9 @@
 		D103DA211C5E96F30062BD90 /* DayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103DA201C5E96F30062BD90 /* DayButton.swift */; };
 		D106A1001C5D8CEF0042C38C /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = D106A0FF1C5D8CEF0042C38C /* Alarm.swift */; };
 		D106A1021C5D90E70042C38C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D106A1011C5D90E70042C38C /* ListViewController.swift */; };
+		D14E86C21C5F01EB0085C251 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14E86C11C5F01EB0085C251 /* EditViewController.swift */; };
+		D14E86C41C5F05550085C251 /* AlarmNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14E86C31C5F05550085C251 /* AlarmNotificationViewController.swift */; };
+		D14E86C61C5F07430085C251 /* AlarmNotifyStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14E86C51C5F07430085C251 /* AlarmNotifyStoryboard.storyboard */; };
 		D1AE55701C5D9FFF009FB954 /* AlarmItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AE556F1C5D9FFF009FB954 /* AlarmItemTableViewCell.swift */; };
 		D1B026B11C5D6A200099520F /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B026B01C5D6A200099520F /* AddViewController.swift */; };
 		D1B026B41C5D6A200099520F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B026B21C5D6A200099520F /* Main.storyboard */; };
@@ -88,10 +91,13 @@
 
 /* Begin PBXFileReference section */
 		0F1D06FC1C5DA0D900351784 /* AlarmsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmsManager.swift; sourceTree = "<group>"; };
-		D103DA201C5E96F30062BD90 /* DayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayButton.swift; sourceTree = "<group>"; };
 		0F1D06FE1C5EA4A500351784 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		D103DA201C5E96F30062BD90 /* DayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayButton.swift; sourceTree = "<group>"; };
 		D106A0FF1C5D8CEF0042C38C /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		D106A1011C5D90E70042C38C /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		D14E86C11C5F01EB0085C251 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		D14E86C31C5F05550085C251 /* AlarmNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmNotificationViewController.swift; sourceTree = "<group>"; };
+		D14E86C51C5F07430085C251 /* AlarmNotifyStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlarmNotifyStoryboard.storyboard; sourceTree = "<group>"; };
 		D1AE556F1C5D9FFF009FB954 /* AlarmItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmItemTableViewCell.swift; sourceTree = "<group>"; };
 		D1B026AB1C5D6A200099520F /* AppleAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B026AE1C5D6A200099520F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,10 +185,13 @@
 			isa = PBXGroup;
 			children = (
 				D1B026AE1C5D6A200099520F /* AppDelegate.swift */,
+				D14E86C51C5F07430085C251 /* AlarmNotifyStoryboard.storyboard */,
 				0F1D06FE1C5EA4A500351784 /* extensions.swift */,
 				D1B026B01C5D6A200099520F /* AddViewController.swift */,
 				D106A1011C5D90E70042C38C /* ListViewController.swift */,
 				D1B026B21C5D6A200099520F /* Main.storyboard */,
+				D14E86C31C5F05550085C251 /* AlarmNotificationViewController.swift */,
+				D14E86C11C5F01EB0085C251 /* EditViewController.swift */,
 				D103DA201C5E96F30062BD90 /* DayButton.swift */,
 				D1AE556F1C5D9FFF009FB954 /* AlarmItemTableViewCell.swift */,
 				D1B026B51C5D6A200099520F /* Assets.xcassets */,
@@ -396,6 +405,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D14E86C61C5F07430085C251 /* AlarmNotifyStoryboard.storyboard in Resources */,
 				D1B026B91C5D6A200099520F /* LaunchScreen.storyboard in Resources */,
 				D1B026B61C5D6A200099520F /* Assets.xcassets in Resources */,
 				D1B026B41C5D6A200099520F /* Main.storyboard in Resources */,
@@ -448,6 +458,8 @@
 				D106A1001C5D8CEF0042C38C /* Alarm.swift in Sources */,
 				0F1D06FD1C5DA0D900351784 /* AlarmsManager.swift in Sources */,
 				D103DA211C5E96F30062BD90 /* DayButton.swift in Sources */,
+				D14E86C21C5F01EB0085C251 /* EditViewController.swift in Sources */,
+				D14E86C41C5F05550085C251 /* AlarmNotificationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

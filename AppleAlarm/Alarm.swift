@@ -16,7 +16,7 @@ class Alarm : NSObject, NSCoding {
     var time: NSDate
     let alarmColor = UIColor.blueColor()
     var vibrate: Bool
-    var snooze: Int
+    var snooze: Bool
     //var device: String
     var media: String
     
@@ -42,7 +42,7 @@ class Alarm : NSObject, NSCoding {
         self.name = "New Alarm"
         self.time = NSDate()
         self.vibrate = true
-        self.snooze = 0
+        self.snooze = true
         //self.device = "Default"
         self.media = "Default"
         
@@ -52,7 +52,7 @@ class Alarm : NSObject, NSCoding {
     
     // FIXME: not correctly initializing
     //init for creating alarm item
-    init(isActive: Bool, name: String, time newTime: NSDate, vibrate: Bool, snooze: Int, media: String, daysShort: String, timeShort: String) {
+    init(isActive: Bool, name: String, time newTime: NSDate, vibrate: Bool, snooze: Bool, media: String, daysShort: String, timeShort: String) {
         self.isActive = isActive
         self.name = name
         self.time = newTime
@@ -70,7 +70,7 @@ class Alarm : NSObject, NSCoding {
         name = aDecoder.decodeObjectForKey(NameKey) as! String
         time = aDecoder.decodeObjectForKey(TimeKey) as! NSDate
         vibrate = aDecoder.decodeObjectForKey(VibrateKey) as! Bool
-        snooze = aDecoder.decodeObjectForKey(SnoozeKey) as! Int
+        snooze = aDecoder.decodeObjectForKey(SnoozeKey) as! Bool
         //device = aDecoder.decodeObjectForKey(DeviceKey) as! String
         media = aDecoder.decodeObjectForKey(MediaKey) as! String
         daysShort = aDecoder.decodeObjectForKey(DaysShortKey) as! String

@@ -39,4 +39,20 @@ class ListViewController : UITableViewController {
             }
         }
     }
+    
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let action = UITableViewRowAction(style: .Normal, title: "Delete") { (Action, Index) -> Void in
+            print("delete alarm")
+            self.alarmsManager.alarms.removeAtIndex(Index.row)
+            self.alarmsManager.save()
+            self.tableView.reloadData()
+            print(Index)
+        }
+        action.backgroundColor = UIColor.redColor()
+        return [action]
+    }
 }

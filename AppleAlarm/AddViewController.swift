@@ -75,7 +75,7 @@ class AddViewController: UIViewController {
     var newItem: Alarm?
     
     override func viewDidLoad() {
-        print(UIDevice.currentDevice().name)
+        //print(UIDevice.currentDevice().name)
         super.viewDidLoad()
         dayBtns += [monBtn, tueBtn, wedBtn, thuBtn, friBtn, satBtn, sunBtn]
         // Do any additional setup after loading the view, typically from a nib.
@@ -151,30 +151,37 @@ class AddViewController: UIViewController {
         var timeShort = "";
         var days = "";
         let time: NSDate = NSDate()
+        var vibrateBool: Bool = false
+        var snoozeBool: Bool = false
         //let dateFormatter = NSDateFormatter()
         //dateFormatter.dateFormat = "hh:mm"
         //let date = dateFormatter.dateFromString(
         if segue.identifier == "DoneItem" {
 
             timeShort = hourTF.text! + ":" + minuteTF.text! + timeOfDay
+            if vibrateSwitch.enabled {
+                vibrateBool = true
+            }
+            
+            if snoozeSwitch.enabled {
+                snoozeBool = true
+            }
+            
             if let alarmName: String = alarmTitleTF.text {
                 for i in dayBtns {
                     if i.selected {
                         days += (i.titleLabel?.text)! + " "
                     }
                 }
+                if days.isEmpty {
+                    days = "Today"
+                }
                 if !alarmName.isEmpty {
-                    newItem = Alarm(isActive: true, name: alarmName, time: time, vibrate: true, snooze: 0, media: "default", daysShort: days, timeShort: timeShort)
+                    newItem = Alarm(isActive: true, name: alarmName, time: time, vibrate: vibrateBool, snooze: snoozeBool, media: "default", daysShort: days, timeShort: timeShort)
+                } else if alarmName.isEmpty {
+                    newItem = Alarm(isActive: true, name: "New Alarm", time: time, vibrate: vibrateBool, snooze: snoozeBool, media: "default", daysShort: days, timeShort: timeShort)
                 }
             }
-            if let name = alarmTitleTF.text {
-                if !name.isEmpty {
-                    newItem = Alarm(isActive: true, name: name, time: NSDate(), vibrate: true, snooze: 0, media: "default",
-                        daysShort: days, timeShort: timeShort)
-                    
-                }
-            }
-            print(days)
             
             //get all buttons that are enabled
             //create a new alarm item using all attributes
