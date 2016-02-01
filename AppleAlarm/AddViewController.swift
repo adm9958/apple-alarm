@@ -174,7 +174,4 @@ class AddViewController: UIViewController {
             //create a new alarm item using all attributes
         }
     }
-    }
-
-}
 
