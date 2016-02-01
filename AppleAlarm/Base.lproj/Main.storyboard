@@ -1,13 +1,166 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f46-CV-Z44">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--List View Controller-->
+        <scene sceneID="5dq-j1-Z5q">
+            <objects>
+                <tableViewController id="xWl-zs-pFf" userLabel="List View Controller" customClass="ListViewController" customModule="AppleAlarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="iqS-2d-nIo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlarmItemTableViewCell" id="O2e-yV-9av" customClass="AlarmItemTableViewCell" customModule="AppleAlarm" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O2e-yV-9av" id="q23-WT-5WG">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="AppleAlarmIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4Kc-xV-Ncd">
+                                            <rect key="frame" x="15" y="18" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="ggA-0F-LF9"/>
+                                                <constraint firstAttribute="width" constant="40" id="zWL-OZ-07P"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuL-VJ-GRS">
+                                            <rect key="frame" x="70" y="13" width="88" height="22"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Test Alarm">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="18" name="HelveticaNeue-Medium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00am" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqB-sZ-SS5">
+                                            <rect key="frame" x="70" y="44" width="47" height="14"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hobbit Soundtrack" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDv-Iw-0b6">
+                                            <rect key="frame" x="475" y="42" width="102" height="14"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon Wed Fri" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSu-or-3MY">
+                                            <rect key="frame" x="508" y="18" width="69" height="14"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lqB-sZ-SS5" firstAttribute="top" secondItem="uuL-VJ-GRS" secondAttribute="bottom" constant="10" id="0fn-XE-MMm"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="4Kc-xV-Ncd" secondAttribute="bottom" constant="15" id="2ck-4i-LcQ"/>
+                                        <constraint firstItem="lqB-sZ-SS5" firstAttribute="centerY" secondItem="q23-WT-5WG" secondAttribute="centerY" constant="10" id="9Ib-PY-cEh"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="4Kc-xV-Ncd" secondAttribute="bottom" constant="20" id="B6V-JD-T9d"/>
+                                        <constraint firstItem="4Kc-xV-Ncd" firstAttribute="leading" secondItem="q23-WT-5WG" secondAttribute="leading" constant="15" id="D1P-Ey-bAB"/>
+                                        <constraint firstItem="lqB-sZ-SS5" firstAttribute="top" secondItem="uuL-VJ-GRS" secondAttribute="bottom" constant="10" id="EO7-25-9qb"/>
+                                        <constraint firstItem="lqB-sZ-SS5" firstAttribute="leading" secondItem="q23-WT-5WG" secondAttribute="leadingMargin" constant="15" id="FyA-tt-4Dx"/>
+                                        <constraint firstItem="lqB-sZ-SS5" firstAttribute="leading" secondItem="4Kc-xV-Ncd" secondAttribute="trailing" constant="15" id="GbY-dt-ULv"/>
+                                        <constraint firstItem="fSu-or-3MY" firstAttribute="leading" secondItem="uuL-VJ-GRS" secondAttribute="trailing" constant="10" id="Gv9-VJ-sd3"/>
+                                        <constraint firstItem="4Kc-xV-Ncd" firstAttribute="top" secondItem="q23-WT-5WG" secondAttribute="topMargin" constant="15" id="HBg-4D-bNv"/>
+                                        <constraint firstItem="MDv-Iw-0b6" firstAttribute="leading" secondItem="lqB-sZ-SS5" secondAttribute="trailing" constant="10" id="KgE-CP-1RX"/>
+                                        <constraint firstItem="4Kc-xV-Ncd" firstAttribute="leading" secondItem="q23-WT-5WG" secondAttribute="leadingMargin" constant="15" id="OEw-XY-F8x"/>
+                                        <constraint firstItem="fSu-or-3MY" firstAttribute="trailing" secondItem="q23-WT-5WG" secondAttribute="trailingMargin" constant="15" id="OdB-1h-Ybc"/>
+                                        <constraint firstItem="fSu-or-3MY" firstAttribute="trailing" secondItem="MDv-Iw-0b6" secondAttribute="trailing" priority="500" id="UVn-F0-CXZ"/>
+                                        <constraint firstItem="MDv-Iw-0b6" firstAttribute="top" secondItem="fSu-or-3MY" secondAttribute="bottom" constant="10" id="VbG-Rk-Ga3"/>
+                                        <constraint firstItem="4Kc-xV-Ncd" firstAttribute="top" secondItem="q23-WT-5WG" secondAttribute="topMargin" constant="15" id="WYJ-98-AT1"/>
+                                        <constraint firstItem="uuL-VJ-GRS" firstAttribute="leading" secondItem="4Kc-xV-Ncd" secondAttribute="trailing" constant="15" id="aNk-QV-rpM"/>
+                                        <constraint firstItem="4Kc-xV-Ncd" firstAttribute="leading" secondItem="q23-WT-5WG" secondAttribute="leadingMargin" constant="15" id="cVP-e7-gRc"/>
+                                        <constraint firstItem="MDv-Iw-0b6" firstAttribute="leading" secondItem="lqB-sZ-SS5" secondAttribute="trailing" constant="10" id="ckh-ca-JPg"/>
+                                        <constraint firstItem="4Kc-xV-Ncd" firstAttribute="top" secondItem="q23-WT-5WG" secondAttribute="topMargin" constant="15" id="cpn-4r-wTJ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="4Kc-xV-Ncd" secondAttribute="bottom" constant="15" id="d0r-H3-Qsz"/>
+                                        <constraint firstItem="fSu-or-3MY" firstAttribute="trailing" secondItem="q23-WT-5WG" secondAttribute="trailingMargin" constant="-15" id="e3O-PL-sgS"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="4Kc-xV-Ncd" secondAttribute="bottom" constant="20" id="fvI-AV-KTt"/>
+                                        <constraint firstItem="MDv-Iw-0b6" firstAttribute="top" secondItem="fSu-or-3MY" secondAttribute="bottom" constant="10" id="gmf-FP-0cP"/>
+                                        <constraint firstItem="4Kc-xV-Ncd" firstAttribute="top" secondItem="q23-WT-5WG" secondAttribute="topMargin" constant="10" id="hdm-kP-olF"/>
+                                        <constraint firstItem="uuL-VJ-GRS" firstAttribute="top" secondItem="q23-WT-5WG" secondAttribute="topMargin" constant="5" id="mAx-eu-jE1"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="MDv-Iw-0b6" secondAttribute="bottom" constant="15" id="mcI-6z-vXP"/>
+                                        <constraint firstItem="4Kc-xV-Ncd" firstAttribute="top" secondItem="q23-WT-5WG" secondAttribute="topMargin" constant="20" id="nrB-HQ-m6b"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="lqB-sZ-SS5" secondAttribute="bottom" constant="15" id="oMf-9Q-SzW"/>
+                                        <constraint firstItem="MDv-Iw-0b6" firstAttribute="trailing" secondItem="q23-WT-5WG" secondAttribute="trailingMargin" constant="15" id="r0l-hC-dEM"/>
+                                        <constraint firstItem="fSu-or-3MY" firstAttribute="top" secondItem="q23-WT-5WG" secondAttribute="topMargin" constant="10" id="s9M-RN-N8F"/>
+                                        <constraint firstItem="lqB-sZ-SS5" firstAttribute="leading" secondItem="uuL-VJ-GRS" secondAttribute="leading" id="vMr-tu-IpV"/>
+                                        <constraint firstItem="uuL-VJ-GRS" firstAttribute="leading" secondItem="4Kc-xV-Ncd" secondAttribute="trailing" constant="15" id="xJN-u7-8Wf"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="lqB-sZ-SS5" secondAttribute="bottom" constant="15" id="zyv-xq-sW7"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="2ck-4i-LcQ"/>
+                                            <exclude reference="B6V-JD-T9d"/>
+                                            <exclude reference="HBg-4D-bNv"/>
+                                            <exclude reference="OEw-XY-F8x"/>
+                                            <exclude reference="WYJ-98-AT1"/>
+                                            <exclude reference="cVP-e7-gRc"/>
+                                            <exclude reference="cpn-4r-wTJ"/>
+                                            <exclude reference="d0r-H3-Qsz"/>
+                                            <exclude reference="fvI-AV-KTt"/>
+                                            <exclude reference="nrB-HQ-m6b"/>
+                                            <exclude reference="aNk-QV-rpM"/>
+                                            <exclude reference="xJN-u7-8Wf"/>
+                                            <exclude reference="9Ib-PY-cEh"/>
+                                            <exclude reference="EO7-25-9qb"/>
+                                            <exclude reference="FyA-tt-4Dx"/>
+                                            <exclude reference="oMf-9Q-SzW"/>
+                                            <exclude reference="zyv-xq-sW7"/>
+                                            <exclude reference="KgE-CP-1RX"/>
+                                            <exclude reference="VbG-Rk-Ga3"/>
+                                            <exclude reference="ckh-ca-JPg"/>
+                                            <exclude reference="mcI-6z-vXP"/>
+                                            <exclude reference="r0l-hC-dEM"/>
+                                            <exclude reference="Gv9-VJ-sd3"/>
+                                            <exclude reference="OdB-1h-Ybc"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="alarmDayLabel" destination="fSu-or-3MY" id="Hqp-uq-RAj"/>
+                                    <outlet property="alarmImage" destination="4Kc-xV-Ncd" id="She-w9-eJq"/>
+                                    <outlet property="alarmNameLabel" destination="uuL-VJ-GRS" id="A49-5j-Lho"/>
+                                    <outlet property="alarmSoundLabel" destination="MDv-Iw-0b6" id="HgH-gS-ol1"/>
+                                    <outlet property="alarmTimeLabel" destination="lqB-sZ-SS5" id="zxU-eB-WAJ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xWl-zs-pFf" id="m6C-Am-PsP"/>
+                            <outlet property="delegate" destination="xWl-zs-pFf" id="GU3-WP-6kO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="eYk-7a-yoG">
+                        <barButtonItem key="leftBarButtonItem" title="Test" id="oSL-Pm-N44">
+                            <connections>
+                                <segue destination="BDC-YO-PDS" kind="presentation" id="PPb-Ng-XlO"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Vh4-6k-7ks">
+                            <connections>
+                                <segue destination="pAd-Xg-PxA" kind="presentation" id="6hr-HM-Bis"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uRS-fx-3Xl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="-340"/>
+        </scene>
+        <!--Add View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AddViewController" customModule="AppleAlarm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +168,402 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DOo-Cc-PyY">
+                                <rect key="frame" x="15" y="79" width="570" height="442"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="17j-Im-3Zd">
+                                        <rect key="frame" x="0.0" y="0.0" width="570" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alarm Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IUs-2k-HwH" userLabel="AlarmTitleTF">
+                                                <rect key="frame" x="0.0" y="0.0" width="570" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="alarmTitleTF"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="center" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="SRb-hq-oaz">
+                                        <rect key="frame" x="0.0" y="50" width="570" height="120"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="right" translatesAutoresizingMaskIntoConstraints="NO" id="yj1-MJ-yY6">
+                                                <rect key="frame" x="0.0" y="0.0" width="416" height="120"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="E64-4N-Ge6" userLabel="hourTF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="277" height="120"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="hourTF"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="100"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CQJ-P2-mX3">
+                                                        <rect key="frame" x="277" y="0.0" width="28" height="120"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="colonTF"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="100"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HrI-E4-G2x">
+                                                        <rect key="frame" x="305" y="0.0" width="112" height="120"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="minuteTF"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="100"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="wBq-cD-X6v">
+                                                <rect key="frame" x="446" y="0.0" width="124" height="120"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbT-g2-PPR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="63" height="60"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="40"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="AM">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <color key="titleColor" red="0.058823529409999999" green="0.56078431370000004" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="timeOfDayBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="InH-3D-fdm"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWs-4m-4nH">
+                                                        <rect key="frame" x="0.0" y="60" width="63" height="60"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="40"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="PM">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <color key="titleColor" red="0.058823529409999999" green="0.56078431370000004" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="timeOfDayBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Trq-30-NdZ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="120" id="9Je-Ot-GEI"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="456-JP-QzQ">
+                                        <rect key="frame" x="0.0" y="190" width="570" height="42"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebp-bs-ymp" customClass="DayButton" customModule="AppleAlarm" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="82" height="42"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                                <state key="normal" title="Mon">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" red="0.058823529409999999" green="0.56078431370000004" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="dayBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kDI-SN-Wsr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8B-sb-uyl" customClass="DayButton" customModule="AppleAlarm" customModuleProvider="target">
+                                                <rect key="frame" x="82" y="0.0" width="82" height="42"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                <state key="normal" title="Tue">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" red="0.058823529409999999" green="0.56078431370000004" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="dayBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S8d-cH-r2M"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKy-SS-MJk" customClass="DayButton" customModule="AppleAlarm" customModuleProvider="target">
+                                                <rect key="frame" x="163" y="0.0" width="82" height="42"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                <state key="normal" title="Wed">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" red="0.058823529409999999" green="0.56078431370000004" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="dayBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N9Y-sR-SSc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYf-q8-yvy" customClass="DayButton" customModule="AppleAlarm" customModuleProvider="target">
+                                                <rect key="frame" x="245" y="0.0" width="81" height="42"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                <state key="normal" title="Thu">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" red="0.058823529409999999" green="0.56078431370000004" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="dayBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cR2-nL-D56"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0v-IY-j8D" customClass="DayButton" customModule="AppleAlarm" customModuleProvider="target">
+                                                <rect key="frame" x="326" y="0.0" width="82" height="42"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                <state key="normal" title="Fri">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" red="0.058823529409999999" green="0.56078431370000004" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="dayBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eOC-rm-k4m"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1I-IS-vo4" customClass="DayButton" customModule="AppleAlarm" customModuleProvider="target">
+                                                <rect key="frame" x="407" y="0.0" width="82" height="42"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                <state key="normal" title="Sat">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" red="0.058823529409999999" green="0.56078431370000004" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="dayBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nvj-NT-8Mx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftq-6M-0kS" customClass="DayButton" customModule="AppleAlarm" customModuleProvider="target">
+                                                <rect key="frame" x="489" y="0.0" width="82" height="42"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                <state key="normal" title="Sun">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" red="0.058823529409999999" green="0.56078431370000004" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="dayBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nKH-1d-Aca"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lri-3q-7gN">
+                                        <rect key="frame" x="0.0" y="252" width="570" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohC-Ff-zSp">
+                                                <rect key="frame" x="0.0" y="0.0" width="521" height="31"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                                <state key="normal" title="Vibrate">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="os7-lP-2ws">
+                                                <rect key="frame" x="521" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTX-CJ-CIi">
+                                        <rect key="frame" x="0.0" y="303" width="570" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lX-df-6TE">
+                                                <rect key="frame" x="0.0" y="0.0" width="521" height="31"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                                <state key="normal" title="Snooze">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FgH-Jx-dwr">
+                                                <rect key="frame" x="521" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gD2-hF-EAI">
+                                        <rect key="frame" x="0.0" y="354" width="570" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InK-Ht-VuC">
+                                                <rect key="frame" x="0.0" y="0.0" width="450" height="34"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                                <state key="normal" title="Device">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="This iPhone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIV-i6-1UV">
+                                                <rect key="frame" x="450" y="0.0" width="91" height="34"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                                <color key="textColor" red="0.63137254899999995" green="0.70588235290000001" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPl-nV-ifv">
+                                                <rect key="frame" x="540" y="0.0" width="30" height="34"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.63137254899999995" green="0.70588235290000001" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VnI-To-Vw7">
+                                        <rect key="frame" x="0.0" y="408" width="570" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZ4-j4-eJo">
+                                                <rect key="frame" x="0.0" y="0.0" width="429" height="34"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                                <state key="normal" title="Media">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKm-sf-1Lu">
+                                                <rect key="frame" x="429" y="0.0" width="111" height="34"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                                <state key="normal" title="Default Sound">
+                                                    <color key="titleColor" red="0.63137254899999995" green="0.70588235290000001" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4g-W0-18Y">
+                                                <rect key="frame" x="540" y="0.0" width="30" height="34"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                <state key="normal" title="&gt;">
+                                                    <color key="titleColor" red="0.63137254899999995" green="0.70588235290000001" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.98823535439999999" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="DOo-Cc-PyY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="4UW-fb-fjL"/>
+                            <constraint firstItem="SRb-hq-oaz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AsP-MD-4Aj"/>
+                            <constraint firstAttribute="trailing" secondItem="DOo-Cc-PyY" secondAttribute="trailing" constant="15" id="Gjr-We-JCN"/>
+                            <constraint firstItem="DOo-Cc-PyY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="snY-dR-YXW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="AsP-MD-4Aj"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="zlo-dB-iaU">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="iLV-Kt-ujX">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="zut-4T-yUQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="AcF-Q5-CP3">
+                            <connections>
+                                <segue destination="Ulf-P8-huW" kind="unwind" identifier="DoneItem" unwindAction="unwindToList:" id="Iaw-P1-4KP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="alarmTitleTF" destination="IUs-2k-HwH" id="kqQ-Wn-I4d"/>
+                        <outlet property="amBtn" destination="MbT-g2-PPR" id="onr-Xb-9et"/>
+                        <outlet property="deviceName" destination="fIV-i6-1UV" id="67v-8j-pqe"/>
+                        <outlet property="friBtn" destination="q0v-IY-j8D" id="r3h-4A-MJN"/>
+                        <outlet property="hourTF" destination="E64-4N-Ge6" id="fxn-Sp-7xs"/>
+                        <outlet property="minuteTF" destination="HrI-E4-G2x" id="anz-nN-PNK"/>
+                        <outlet property="monBtn" destination="Ebp-bs-ymp" id="7uB-r5-9PM"/>
+                        <outlet property="pmBtn" destination="oWs-4m-4nH" id="zaY-mN-ZMR"/>
+                        <outlet property="satBtn" destination="h1I-IS-vo4" id="mZw-0c-xDR"/>
+                        <outlet property="snoozeSwitch" destination="FgH-Jx-dwr" id="iws-aZ-0oL"/>
+                        <outlet property="sunBtn" destination="Ftq-6M-0kS" id="xPx-kb-IGp"/>
+                        <outlet property="thuBtn" destination="lYf-q8-yvy" id="wFR-q2-kXN"/>
+                        <outlet property="tueBtn" destination="V8B-sb-uyl" id="Aop-Dd-GFE"/>
+                        <outlet property="vibrateSwitch" destination="os7-lP-2ws" id="4Xp-lQ-X3s"/>
+                        <outlet property="wedBtn" destination="wKy-SS-MJk" id="CJV-wX-HOM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="Ulf-P8-huW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
+            <point key="canvasLocation" x="1117" y="387"/>
+        </scene>
+        <!--Add Nav Controller-->
+        <scene sceneID="RFv-dh-nk9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pAd-Xg-PxA" userLabel="Add Nav Controller" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v2C-Ad-arj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fXF-j9-8L0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K8i-xW-1cX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="387"/>
+        </scene>
+        <!--List Nav Controller-->
+        <scene sceneID="8Vg-mF-pOb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f46-CV-Z44" userLabel="List Nav Controller" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VgX-G8-vwB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xWl-zs-pFf" kind="relationship" relationship="rootViewController" id="gMA-NS-7Be"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lhi-Sg-Rxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="-340"/>
+        </scene>
+        <!--Alarm Notification View Controller-->
+        <scene sceneID="7ez-UE-Qmj">
+            <objects>
+                <viewController storyboardIdentifier="AlarmNotifierTest" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BDC-YO-PDS" customClass="AlarmNotificationViewController" customModule="AppleAlarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6YY-iV-dfi"/>
+                        <viewControllerLayoutGuide type="bottom" id="kZI-2S-QvB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GzZ-c4-eb2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="T0b-Rz-I8Z">
+                                <rect key="frame" x="150" y="402" width="138" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSI-a4-8rC">
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="30"/>
+                                        <color key="backgroundColor" red="0.98823535439999999" green="0.98823535439999999" blue="0.96470594409999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <state key="normal" title="Snooze">
+                                            <color key="titleColor" red="0.058823529409999999" green="0.56078431370000004" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMd-n1-0cT">
+                                        <rect key="frame" x="84" y="0.0" width="54" height="30"/>
+                                        <state key="normal" title="Dismiss"/>
+                                        <connections>
+                                            <action selector="dismiss:" destination="BDC-YO-PDS" eventType="touchUpInside" id="k80-Na-Kur"/>
+                                            <segue destination="kJt-64-hdj" kind="unwind" unwindAction="unwindToList:" id="U3W-FN-FEV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ql-cI-ZDQ">
+                                <rect key="frame" x="147" y="66" width="306" height="269"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="ImageGIF" destination="7ql-cI-ZDQ" id="UFK-Zq-arT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M5T-2J-YgM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kJt-64-hdj" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="-1032"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AppleAlarmIcon" width="76" height="76"/>
+    </resources>
 </document>
